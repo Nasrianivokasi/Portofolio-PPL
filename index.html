@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portofolio PPL PPG | Calon Guru Profesional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-active {
+            border-bottom: 2px solid #2563eb;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">
+                        P
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Portofolio PPG</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-slate-600 hover:text-brand-600 px-3 py-2 text-sm font-medium transition-colors">Beranda</a>
+                    <a href="#profil" class="text-slate-600 hover:text-brand-600 px-3 py-2 text-sm font-medium transition-colors">Profil</a>
+                    <a href="#artefak" class="text-slate-600 hover:text-brand-600 px-3 py-2 text-sm font-medium transition-colors">Artefak UTS</a>
+                    <a href="#refleksi" class="text-slate-600 hover:text-brand-600 px-3 py-2 text-sm font-medium transition-colors">Refleksi</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold mb-6 border border-brand-100">
+                <i class="fas fa-graduation-cap mr-2"></i> Pendidikan Profesi Guru
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                E-Portofolio <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">
+                    Praktik Pengalaman Lapangan I
+                </span>
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto md:mx-0">
+                Kumpulan karya, hasil observasi, dan refleksi pembelajaran sebagai bentuk pertanggungjawaban Ujian Tengah Semester (UTS) PPL PPG.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#artefak" class="px-6 py-3 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
+                    <i class="fas fa-folder-open"></i> Lihat Artefak UTS
+                </a>
+                <a href="#profil" class="px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+                    <i class="fas fa-user"></i> Profil Mahasiswa
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 relative w-full max-w-md md:max-w-none">
+            <!-- Decorative background elements -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-100 to-indigo-50 rounded-[2rem] transform rotate-3 scale-105 -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" 
+                 alt="Ilustrasi Mengajar" 
+                 class="rounded-[2rem] shadow-2xl object-cover aspect-[4/3] w-full border-4 border-white"
+                 onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Foto+Aktivitas+Mengajar'">
+        </div>
+    </section>
+
+    <!-- Profil Section -->
+    <section id="profil" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Profil Mahasiswa</h2>
+                <div class="w-20 h-1 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-slate-50 rounded-2xl p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0 relative">
+                    <img src="foto-profil.jpeg?auto=format&fit=crop&q=80&w=400" 
+                         alt="Foto Profil" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='foto-profil.jpeg?text=Pas+Foto'">
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Nasriani</h3>
+                    <p class="text-brand-600 font-medium mb-6">Mahasiswa PPG calon guru Gelombang 1 tahun 2026</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">LPTK</p>
+                                <p class="text-slate-900 font-medium">Universitas Negeri Makassar </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Sekolah Mitra </p>
+                                <p class="text-slate-900 font-medium">SMKN 6 MAKASSAR</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Bidang Studi</p>
+                                <p class="text-slate-900 font-medium">KULINER</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Dosen/Guru Pamong</p>
+                                <p class="text-slate-900 font-medium">Dr. Slamet Widodo, S.Pd., M.Kes & Mardiana Mandeha, S.Pd.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <p class="italic text-slate-600 text-center md:text-left">
+                            "Mendidik adalah seni menuntun segala kodrat yang ada pada anak-anak, agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artefak UTS Section (Tabbed Content) -->
+    <section id="artefak" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Artefak Pelaksanaan PPL (Siklus 1)</h2>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Dokumen pendukung dari tahap observasi, perancangan, hingga pelaksanaan pembelajaran mandiri terbimbing.</p>
+                <div class="w-20 h-1 bg-brand-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex flex-wrap border-b border-slate-200 justify-center mb-8 gap-2 md:gap-8" id="tabs-nav">
+                <button onclick="changeTab('observasi')" class="tab-btn px-4 py-3 text-sm md:text-base font-medium text-slate-500 hover:text-brand-600 transition-colors tab-active" id="tab-observasi">
+                    <i class="fas fa-search mr-2"></i>Hasil Observasi
+                </button>
+                <button onclick="changeTab('perangkat')" class="tab-btn px-4 py-3 text-sm md:text-base font-medium text-slate-500 hover:text-brand-600 transition-colors" id="tab-perangkat">
+                    <i class="fas fa-file-alt mr-2"></i>Perangkat Ajar
+                </button>
+                <button onclick="changeTab('pelaksanaan')" class="tab-btn px-4 py-3 text-sm md:text-base font-medium text-slate-500 hover:text-brand-600 transition-colors" id="tab-pelaksanaan">
+                    <i class="fas fa-video mr-2"></i>Pelaksanaan
+                </button>
+            </div>
+
+            <!-- Tab Content: Observasi -->
+            <div id="content-observasi" class="tab-content fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Karakteristik Peserta Didik</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Hasil analisis asesmen diagnostik menunjukkan bahwa 60% siswa memiliki gaya belajar visual, 30% kinestetik, dan 10% auditori. Tingkat pemahaman awal (readiness) bervariasi sehingga pendekatan TaRL (Teaching at the Right Level) sangat diperlukan.
+                        </p>
+                        <a href="#" class="text-brand-600 font-medium text-sm hover:underline flex items-center gap-1">
+                            Lihat Laporan Lengkap <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                            <i class="fas fa-building text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Lingkungan Belajar</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Observasi lingkungan fisik dan sosiokultural sekolah. Sekolah memiliki fasilitas proyektor di setiap kelas, namun akses internet terbatas. Interaksi guru dan siswa sangat positif.
+                        </p>
+                        <a href="#" class="text-brand-600 font-medium text-sm hover:underline flex items-center gap-1">
+                            Lihat Jurnal Observasi <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Perangkat -->
+            <div id="content-perangkat" class="tab-content hidden fade-in">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Modul Ajar Berbasis TaRL & CRT</h3>
+                    <p class="text-slate-600 mb-8">Dokumen perancangan pembelajaran yang telah dikonsultasikan dan disetujui oleh Dosen Pembimbing Lapangan dan Guru Pamong.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- RPP/Modul -->
+                        <div class="border border-slate-200 rounded-lg p-4 flex flex-col items-center text-center hover:border-brand-500 hover:bg-brand-50 transition-colors group cursor-pointer">
+                            <i class="fas fa-file-pdf text-4xl text-red-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-semibold text-slate-900 mb-1">Modul Ajar Siklus 1</h4>
+                            <p class="text-xs text-slate-500 mb-3">Materi: [Sebutkan Materi]</p>
+                            <button class="mt-auto text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full group-hover:bg-brand-600 group-hover:text-white transition-colors">Unduh PDF</button>
+                        </div>
+                        <!-- LKPD -->
+                        <div class="border border-slate-200 rounded-lg p-4 flex flex-col items-center text-center hover:border-brand-500 hover:bg-brand-50 transition-colors group cursor-pointer">
+                            <i class="fas fa-file-pdf text-4xl text-red-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-semibold text-slate-900 mb-1">LKPD Berdiferensiasi</h4>
+                            <p class="text-xs text-slate-500 mb-3">Lembar Kerja Peserta Didik</p>
+                            <button class="mt-auto text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full group-hover:bg-brand-600 group-hover:text-white transition-colors">Unduh PDF</button>
+                        </div>
+                        <!-- Media -->
+                        <div class="border border-slate-200 rounded-lg p-4 flex flex-col items-center text-center hover:border-brand-500 hover:bg-brand-50 transition-colors group cursor-pointer">
+                            <i class="fas fa-file-powerpoint text-4xl text-orange-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-semibold text-slate-900 mb-1">Media PPT Interaktif</h4>
+                            <p class="text-xs text-slate-500 mb-3">Canva/PowerPoint</p>
+                            <button class="mt-auto text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full group-hover:bg-brand-600 group-hover:text-white transition-colors">Lihat Media</button>
+                        </div>
+                        <!-- Asesmen -->
+                        <div class="border border-slate-200 rounded-lg p-4 flex flex-col items-center text-center hover:border-brand-500 hover:bg-brand-50 transition-colors group cursor-pointer">
+                            <i class="fas fa-file-excel text-4xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-semibold text-slate-900 mb-1">Instrumen Penilaian</h4>
+                            <p class="text-xs text-slate-500 mb-3">Rubrik Sikap & Kognitif</p>
+                            <button class="mt-auto text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full group-hover:bg-brand-600 group-hover:text-white transition-colors">Unduh File</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Pelaksanaan -->
+            <div id="content-pelaksanaan" class="tab-content hidden fade-in">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <!-- Video Section -->
+                        <div class="p-6 bg-slate-900 flex flex-col justify-center">
+                            <h3 class="text-white text-xl font-bold mb-4 flex items-center gap-2"><i class="fab fa-youtube text-red-500"></i> Video Pelaksanaan PPL</h3>
+                            <div class="relative w-full aspect-video bg-black rounded-lg overflow-hidden flex items-center justify-center border border-slate-700">
+                                <!-- Placeholder for YouTube iframe. Replace src with your embedded link -->
+                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800" alt="Video Thumbnail" class="opacity-50 w-full h-full object-cover">
+                                <button class="absolute w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-lg shadow-red-500/50">
+                                    <i class="fas fa-play text-xl ml-1"></i>
+                                </button>
+                                <span class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">15:00</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mt-3">Potongan video berdurasi 15 menit yang menampilkan kegiatan pendahuluan, inti, dan penutup pembelajaran.</p>
+                        </div>
+                        <!-- Photo Gallery -->
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-4">Galeri Dokumentasi</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400" alt="Kegiatan Kelompok" class="rounded-lg w-full h-32 object-cover border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=400" alt="Presentasi" class="rounded-lg w-full h-32 object-cover border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=400" alt="Guru Membimbing" class="rounded-lg w-full h-32 object-cover border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1427504494785-319ce8372ac0?auto=format&fit=crop&q=80&w=400" alt="Asesmen" class="rounded-lg w-full h-32 object-cover border border-slate-200">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Refleksi Section (Model 4F) -->
+    <section id="refleksi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Jurnal Mengajar</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Refleksi Pembelajaran</h2>
+                <div class="w-20 h-1 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4">Analisis diri menggunakan kerangka kerja 4F (Facts, Feelings, Findings, Future)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Facts -->
+                <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-100 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold text-lg">1</div>
+                            <h3 class="text-xl font-bold text-slate-900">Peristiwa <span class="text-blue-500 text-sm font-normal">(Facts)</span></h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            [Tuliskan deskripsi objektif tentang apa yang terjadi selama Anda mengajar. Misalnya: "Pada hari Senin, saya mengajar materi X di kelas Y. Saya menggunakan metode diskusi kelompok. Saat kegiatan inti, ada satu kelompok yang pasif karena kurang memahami instruksi LKPD..."]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feelings -->
+                <div class="bg-rose-50/50 p-6 rounded-2xl border border-rose-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-rose-100 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-rose-500 text-white rounded-lg flex items-center justify-center font-bold text-lg">2</div>
+                            <h3 class="text-xl font-bold text-slate-900">Perasaan <span class="text-rose-500 text-sm font-normal">(Feelings)</span></h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            [Tuliskan emosi yang Anda rasakan selama mengajar. Misalnya: "Saya merasa gugup di awal pembelajaran, namun kemudian merasa antusias ketika melihat siswa merespons pertanyaan pemantik dengan baik. Ada sedikit rasa kecewa ketika manajemen waktu meleset di bagian penutup..."]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Findings -->
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-amber-100 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-lg">3</div>
+                            <h3 class="text-xl font-bold text-slate-900">Pembelajaran <span class="text-amber-500 text-sm font-normal">(Findings)</span></h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            [Tuliskan pelajaran berharga atau penemuan baru yang Anda dapatkan. Misalnya: "Saya belajar bahwa instruksi tertulis di LKPD harus sangat ringkas dan didukung instruksi lisan yang jelas. Pendekatan TaRL sangat efektif bagi siswa kelompok bawah, mereka butuh scaffolding lebih..."]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Future -->
+                <div class="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-emerald-100 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center font-bold text-lg">4</div>
+                            <h3 class="text-xl font-bold text-slate-900">Penerapan <span class="text-emerald-500 text-sm font-normal">(Future)</span></h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            [Tuliskan rencana perbaikan untuk siklus mengajar berikutnya. Misalnya: "Pada siklus 2 nanti, saya akan mengatur timer agar alokasi waktu tiap sintaks lebih disiplin. Saya juga akan membuat tutor sebaya untuk membantu kelompok yang kemampuannya masih kurang..."]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <div class="w-6 h-6 rounded bg-brand-600 flex items-center justify-center text-white font-bold text-xs">P</div>
+                    <span class="font-bold text-lg tracking-tight text-white">Portofolio PPG</span>
+                </div>
+                <p class="text-sm text-slate-400">Dibuat untuk memenuhi tugas UTS Mata Kuliah Praktik Pengalaman Lapangan I.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 transition-colors hover:text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 transition-colors hover:text-white">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 transition-colors hover:text-white">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+            &copy; 2024 [Nama Lengkap Anda]. Hak Cipta Dilindungi. Didesain untuk Calon Guru Hebat.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tabs functionality -->
+    <script>
+        function changeTab(tabName) {
+            // Hide all content
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('tab-active');
+            });
+
+            // Show selected content and activate button
+            document.getElementById(`content-${tabName}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabName}`).classList.add('tab-active');
+        }
+    </script>
+</body>
+</html>
